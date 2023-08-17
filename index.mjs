@@ -111,7 +111,7 @@ ${contribution}
 
 ## Questions
 
-${username}
+https://www.github.com/${username}
 -----------------
 ${email},
 -----------------
