@@ -113,7 +113,7 @@ ${contribution}
 
 https://www.github.com/${username}
 -----------------
-${email},
+${email}
 -----------------
 Please contact me via: ${contact}
 `
