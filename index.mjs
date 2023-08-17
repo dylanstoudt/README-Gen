@@ -2,6 +2,7 @@
 import inquirer from "inquirer";
 import fs from "fs/promises";
 
+//Declares variables to grab and pass from inquirer
 let {title, description, installation, usage, license, contribution, tests, username, email, contact} = await inquirer
     .prompt([
         {
@@ -57,7 +58,7 @@ let {title, description, installation, usage, license, contribution, tests, user
             choices: ['GitHub', 'Email']
         }
     ])
-
+//Grabs license badges
 function generateLicense(license) {
 
     if (license === "MIT") {
@@ -71,6 +72,7 @@ function generateLicense(license) {
     }
 }
 
+//Large string to set text of README.md
 let READMEtext = `
 # ${title}
 
@@ -118,4 +120,5 @@ ${contact}${email}
 
 
 `
+//Fileshare to write READMEtext into README.md (Will generate README.md if not created)
 fs.writeFile("README.md", READMEtext)
