@@ -38,7 +38,7 @@ let {title, description, installation, usage, license, contribution, tests, user
         },
         {
             type: 'input',
-            message: "Provide any tests written for your application and provide examples on how to run them.",
+            message: "Provide a link to a screenshot of your application, if the screenshot is in the root directory you can type `./screenshot.png`",
             name: 'tests'
         },
         {
@@ -107,7 +107,7 @@ ${contribution}
 
 ## Tests
 
-![Quick test on generating README](${tests})
+![Screenshot of README-gen code](${tests})
 
 ## Questions
 
@@ -115,10 +115,7 @@ ${username}
 -----------------
 ${email},
 -----------------
-${contact}${email}
-
-
-
+Please contact me via: ${contact}
 `
 //Fileshare to write READMEtext into README.md (Will generate README.md if not created)
 fs.writeFile("README.md", READMEtext)
